@@ -1,0 +1,14 @@
+<div>
+    <h2>{{ __SELF__.property('name') }}</h2>
+    <img src="{{ __SELF__.property('image') }}" height="150">
+    <div><h4>{{ __SELF__.property('description') }}</h4></div>
+    <button
+        class="snipcart-add-item"
+        data-item-id="{{ __SELF__.property('id') }}"
+        data-item-name="{{ __SELF__.property('name') }}"
+        data-item-price="{{ __SELF__.property('price') }}"
+        data-item-url="{{ __SELF__.property('url') }}"
+        data-item-description="{{ __SELF__.property('description')}}">
+    Buy {{__SELF__.property('name')}}
+    </button>
+</div>
