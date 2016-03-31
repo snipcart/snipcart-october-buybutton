@@ -1,4 +1,4 @@
-<?php namespace Snipcart\buybutton;
+<?php namespace Snipcart\Snipcart;
 
 /**
  * The plugin.php file (called the plugin initialization script) defines the plugin information class.
@@ -12,8 +12,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'buybutton',
-            'description' => 'Shows how to integrate snipcart with October CMS',
+            'name'        => 'Snipcart',
+            'description' => 'Integrate Snipcart with October CMS',
             'author'      => 'snipcart',
             'icon'        => 'icon-leaf'
         ];
@@ -22,7 +22,22 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            '\Snipcart\Buybutton\Components\Product' => 'Product'
+            'Snipcart\Snipcart\Components\BuyButton' => 'BuyButton'
         ];
     }
+
+    public function registerSettings()
+    {
+         return [
+            'settings' => [
+                'label'       => 'Api Key',
+                'description' => 'Manage your Api Key.',
+                'category'    => 'Snipcart',
+                'icon'        => 'icon-cog',
+                'class'       => 'Snipcart\Snipcart\Models\Settings',
+                'order'       => 500
+            ]
+        ];
+    }
+
 }
