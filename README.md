@@ -8,4 +8,4 @@ Create a buybutton folder in the newly created snipcart folder.
 
 Clone the repo in there and enjoy!
 
-You can rename any folder but make sure to update the namespace ;)
+You can see our blog post about it at : https://snipcart.com/blog/snipcart-octobercms-ecommerce-tutorial-got
